@@ -1,0 +1,24 @@
+{
+  "name": "kotsu-searcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wata00913",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wata00913/kotsu-searcher.git"
+  },
+  "dependencies": {
+    "enquirer": "^2.3.6",
+    "minimist": "^1.2.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.7.1"
+  }
+}
