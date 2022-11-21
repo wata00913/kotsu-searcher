@@ -3,29 +3,39 @@
 const LineKind = require("../lib/line_kind");
 
 describe("LineKind", () => {
+  const lineKindWithoutMark = new LineKind({ text: "普通", code: "1" });
+  const lineKind = new LineKind({
+    text: "普通",
+    code: "1",
+    Mark: "普",
+  });
+
   describe("short format text", () => {
     it("empty when mark empty", () => {
-      const lineKind = new LineKind({ text: "普通", code: "1" });
-      expect(lineKind.text("short")).toBe("");
+      expect(lineKindWithoutMark.text("short")).toBe("");
     });
 
     it("text when mark is not empty", () => {
-      const lineKind = new LineKind({
-        text: "普通",
-        code: "1",
-        Mark: "普",
-      });
       expect(lineKind.text("short")).toBe("普");
     });
   });
+
   describe("long format text", () => {
     it("text", () => {
-      const lineKind = new LineKind({
-        text: "普通",
-        code: "1",
-        Mark: "普",
-      });
       expect(lineKind.text("long")).toBe("普通");
+    });
+  });
+
+  describe("supplement format text", () => {
+    describe("when mark is empty", () => {
+      it("text is 普通", () => {
+        expect(lineKindWithoutMark.text("supplement")).toBe("普通");
+      });
+      describe("when mark is 普", () => {
+        it("text is 普通", () => {
+          expect(lineKind.text("supplement")).toBe("普:普通");
+        });
+      });
     });
   });
 });
