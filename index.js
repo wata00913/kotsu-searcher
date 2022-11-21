@@ -10,5 +10,5 @@ function main() {
   }
 
   const timetable = require('./lib/serach_command/timetable');
-  timetable.module();
+  timetable();
 }
