@@ -1,6 +1,6 @@
 "use strict";
 
-const LineKind = require("../lib/line_destination");
+const LineKind = require("../lib/line_kind");
 
 describe("LineKind", () => {
   describe("short format text", () => {
@@ -13,7 +13,7 @@ describe("LineKind", () => {
       const lineKind = new LineKind({
         text: "普通",
         code: "1",
-        mark: "普",
+        Mark: "普",
       });
       expect(lineKind.text("short")).toBe("普");
     });
@@ -23,10 +23,9 @@ describe("LineKind", () => {
       const lineKind = new LineKind({
         text: "普通",
         code: "1",
-        mark: "普",
+        Mark: "普",
       });
       expect(lineKind.text("long")).toBe("普通");
     });
   });
 });
-

@@ -13,7 +13,7 @@ describe("LineDestination", () => {
       const lineDestination = new LineDestination({
         text: "福間",
         code: "1",
-        mark: "福",
+        Mark: "福",
       });
       expect(lineDestination.text("short")).toBe("福");
     });
@@ -23,7 +23,7 @@ describe("LineDestination", () => {
       const lineDestination = new LineDestination({
         text: "福間",
         code: "1",
-        mark: "福",
+        Mark: "福",
       });
       expect(lineDestination.text("long")).toBe("福間");
     });
