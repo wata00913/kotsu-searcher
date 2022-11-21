@@ -14,12 +14,30 @@ describe("LineDestination", () => {
   });
 
   describe("short format text", () => {
-    it("empty when mark empty", () => {
-      expect(lineDestinationWithoutMark.text("short")).toBe("");
+    describe("when mark empty", () => {
+      it("text is empty", () => {
+        expect(lineDestinationWithoutMark.text("short")).toBe("");
+      });
+
+      describe("and blacket option parentheses", () => {
+        it("text is empty", () => {
+          expect(lineDestinationWithoutMark.text("short", "parentheses")).toBe(
+            ""
+          );
+        });
+      });
     });
 
-    it("text when mark is not empty", () => {
-      expect(lineDestination.text("short")).toBe("福");
+    describe("when mark is not empty", () => {
+      it("text  is not empty", () => {
+        expect(lineDestination.text("short")).toBe("福");
+      });
+
+      describe("and blacket option parentheses", () => {
+        it("text is (福)", () => {
+          expect(lineDestination.text("short", "parentheses")).toBe("(福)");
+        });
+      });
     });
   });
   describe("long format text", () => {

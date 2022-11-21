@@ -11,12 +11,28 @@ describe("LineKind", () => {
   });
 
   describe("short format text", () => {
-    it("empty when mark empty", () => {
-      expect(lineKindWithoutMark.text("short")).toBe("");
+    describe("when mark empty", () => {
+      it("text is empty", () => {
+        expect(lineKindWithoutMark.text("short")).toBe("");
+      });
+
+      describe("and blacket option parentheses", () => {
+        it("text is empty", () => {
+          expect(lineKindWithoutMark.text("short", "parentheses")).toBe("");
+        });
+      });
     });
 
-    it("text when mark is not empty", () => {
-      expect(lineKind.text("short")).toBe("普");
+    describe("when mark is not empty", () => {
+      it("text is not empty", () => {
+        expect(lineKind.text("short")).toBe("普");
+      });
+
+      describe("and blacket option parentheses", () => {
+        it("text is (普)", () => {
+          expect(lineKind.text("short", "parentheses")).toBe("(普)");
+        });
+      });
     });
   });
 
