@@ -17,4 +17,12 @@ describe("Time", () => {
       expect(first.compare(first2)).toBe(0);
     });
   });
+
+  it("fromISO", () => {
+    const time = Time.fromISO("02:59");
+    expect(time.hour).toBe(2);
+    expect(time.min).toBe(59);
+    expect(time.kind).toBe(null);
+    expect(time.destination).toBe(null);
+  });
 });
