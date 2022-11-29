@@ -51,7 +51,7 @@ const validation = {
 
 main();
 
-function main() {
+async function main() {
   if (process.env.EKISPERT_ACCESS_KEY === undefined) {
     console.log("環境変数:EKISPERT_ACCESS_KEYを設定してください。");
     return;
@@ -60,7 +60,7 @@ function main() {
   const timetable = require("./lib/serach_command/timetable");
   try {
     const [command, options] = parseOptions();
-    timetable(options);
+    await timetable(options);
   } catch (e) {
     console.log(e);
     return;
