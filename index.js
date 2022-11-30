@@ -11,7 +11,7 @@ const optionSettings = {
 
 const commandDefaultOptions = {
   timetable: {
-    "daydiagram": "weekday",
+    daydiagram: "weekday",
   },
 };
 
@@ -19,23 +19,23 @@ const successResult = { success: true, message: "" };
 
 const validation = {
   timetable: {
-    "daydiagram": (val) => {
+    daydiagram: (val) => {
       if (!["weekday", "saturday", "holiday"].includes(val)) {
         return { success: false, message: "diagramの値が不正です" };
       }
       return successResult;
     },
 
-    "hour": (val) => {
+    hour: (val) => {
       if (isNaN(val) || val < 0)
         return { success: false, message: "時刻の値が不正です" };
       return successResult;
     },
 
-    "from": function (val) {
+    from: function (val) {
       return this.timeValid(val);
     },
-    "to": function (val) {
+    to: function (val) {
       return this.timeValid(val);
     },
 

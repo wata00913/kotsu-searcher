@@ -16,7 +16,7 @@ describe("range", () => {
 });
 
 describe("forEachGroupByHour", () => {
-  describe("when group by hour", () =>{
+  describe("when group by hour", () => {
     it("group 5 and 24", () => {
       const timeTable = TimeTable.createFromResponse(response);
       let idx = 0;
