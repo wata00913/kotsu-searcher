@@ -14,5 +14,8 @@
   "rules": {
     "semi": "error",
     "quotes": ["error", "double"]
+  },
+  "settings": {
+    "react": { "version": "999.999.999" }
   }
 }
