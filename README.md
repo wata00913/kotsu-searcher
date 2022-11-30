@@ -31,7 +31,7 @@ kotsu-searcher <command> [<options>]
 | --to         | String     | 表示する範囲の最終時刻を指定します。</br> 時刻の形式はhh:mm<sup>[1](#note1)</sup>です。 |
 | --daydiagram | String     | 曜日ダイヤを指定します。</br> 平日:`weekday`、土曜:`saturday` 日・祝日: `holiday`       |
 
-<small id="note1"> `hh`は00~24、`mm`は00~59の値をとります。
+<small id="note1"> `hh`は00〜24、`mm`は00〜59の値をとります。
 
 ## promptのキーバインド
 CLIのpromptに[enquirer](https://github.com/enquirer/enquirer#-key-bindings)を利用してます。promptで利用できるキーバインドの詳細は、enquirerの[Key Bindings](https://github.com/enquirer/enquirer#-key-bindings)を参照してください。
