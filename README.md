@@ -8,7 +8,7 @@ CLI で交通情報の検索ができます。
 npm でインストールします。
 
 ```sh
-$ npm -i g kotsu-searcher
+$ npm i -g kotsu-searcher
 ```
 
 こちらの[リンク](https://ekiworld.net/free_provision/index.php?utm_source=ekiworld&utm_medium=website&utm_campaign=ews_ekiworld_product_free_header)から駅すぱあと Web サービス(フリープラン)の API アクセスキーを申請します。</br>
