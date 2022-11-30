@@ -1,7 +1,7 @@
 {
   "name": "kotsu-searcher",
   "version": "1.0.0",
-  "description": "",
+  "description": "CLIで交通情報の検索ができます。",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -12,6 +12,10 @@
     "type": "git",
     "url": "git+https://github.com/wata00913/kotsu-searcher.git"
   },
+  "keywords": [
+    "public transport",
+    "kotsu"
+  ],
   "dependencies": {
     "arg": "^5.0.2",
     "axios": "^1.1.3",
