@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 const arg = require("arg");
-const ekispert = require("./lib/ekispert");
 const { Duration } = require("luxon");
 
 const optionSettings = {
@@ -59,7 +58,7 @@ async function main() {
 
   const timetable = require("./lib/serach_command/timetable");
   try {
-    const [command, options] = parseOptions();
+    const [, options] = parseOptions();
     await timetable(options);
   } catch (e) {
     console.log(e);
@@ -82,13 +81,13 @@ function parseOptions() {
   };
   Object.keys(args).forEach((key) => normalize(args, key));
 
-  if (!commandDefaultOptions.hasOwnProperty(command))
+  if (!Object.prototype.hasOwnProperty.call(commandDefaultOptions, command))
     throw "コマンドを指定してください";
 
   const options = { ...commandDefaultOptions[command], ...args };
   const validators = validation[command];
 
-  for (key in options) {
+  for (const key in options) {
     const result = validators[key](options[key]);
     if (!result.success) throw result.message;
   }

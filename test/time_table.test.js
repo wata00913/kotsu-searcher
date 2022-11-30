@@ -20,7 +20,7 @@ describe("forEachGroupByHour", () => {
     it("group 5 and 24", () => {
       const timeTable = TimeTable.createFromResponse(response);
       let idx = 0;
-      const hours = [5, 24]
+      const hours = [5, 24];
       timeTable.forEachGroupByHour((times, hour) => {
         times.forEach((time) => {
           expect(time.hour).toBe(hours[idx]);
