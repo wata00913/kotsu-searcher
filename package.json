@@ -1,6 +1,6 @@
 {
   "name": "kotsu-searcher",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CLIで交通情報の検索ができます。",
   "preferGlobal": true,
   "bin": {
