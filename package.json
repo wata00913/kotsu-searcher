@@ -2,6 +2,10 @@
   "name": "kotsu-searcher",
   "version": "1.0.0",
   "description": "CLIで交通情報の検索ができます。",
+  "preferGlobal": true,
+  "bin": {
+    "kotsu-searcher": "index.js"
+  },
   "main": "index.js",
   "scripts": {
     "test": "jest"
