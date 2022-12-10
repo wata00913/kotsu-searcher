@@ -56,7 +56,7 @@ async function main() {
     return;
   }
 
-  const timetable = require("./lib/serach_command/timetable");
+  const timetable = require("./lib/search_command/timetable");
   try {
     const [, options] = parseOptions();
     await timetable(options);
